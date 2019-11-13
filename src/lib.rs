@@ -394,6 +394,12 @@ impl StdErrLog {
         self
     }
 
+    /// Sets the verbosity level of messages that will be displayed
+    pub fn verbosity_level(&mut self, level: LevelFilter) -> &mut StdErrLog {
+        self.verbosity = level;
+        self
+    }
+
     /// silence all output, no matter the value of verbosity
     pub fn quiet(&mut self, quiet: bool) -> &mut StdErrLog {
         self.quiet = quiet;
